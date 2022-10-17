@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -308,7 +309,7 @@ public class Week7Day2SalesForceSteps extends Week7Day2BaseClass {
 		String displayName = driver.findElement(By.xpath("((//a[@class='forceActionLink'])/div)[7]")).getAttribute("title");
 		System.out.println("Display name :"+displayName);
 		Thread.sleep(4000);
-		
+					
 		if(displayName.contains(name))
 			System.out.println("Name is verified");
 		else
